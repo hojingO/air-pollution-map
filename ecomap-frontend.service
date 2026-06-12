@@ -1,0 +1,15 @@
+[Unit]
+Description=EcoMap Streamlit Frontend Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/air-pollution-map
+ExecStart=/home/ubuntu/air-pollution-map/venv/bin/streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0
+Restart=always
+RestartSec=3
+Environment=PYTHONPATH=/home/ubuntu/air-pollution-map
+
+[Install]
+WantedBy=multi-user.target

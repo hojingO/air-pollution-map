@@ -1,0 +1,15 @@
+[Unit]
+Description=EcoMap FastAPI Backend Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/air-pollution-map
+ExecStart=/home/ubuntu/air-pollution-map/venv/bin/uvicorn backend.app:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=3
+Environment=PYTHONPATH=/home/ubuntu/air-pollution-map
+
+[Install]
+WantedBy=multi-user.target
