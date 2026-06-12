@@ -28,3 +28,7 @@ env/
 # Project specific data files (only ignore large temporary files, keep small sample datasets)
 # data/
 # *.log
+
+# Ignore markdown documentation files (analyses, history, tech stack) but keep README.md
+*.md
+!README.md
