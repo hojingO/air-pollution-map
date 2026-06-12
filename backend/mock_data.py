@@ -32,7 +32,7 @@ INDUSTRIAL_REGIONS = {
             {"name": "울산 석유화학공장 B", "type": "stack", "offset": [-0.012, -0.008], "conf": 0.95, "val": 9.8e-5, "gas": "NO2"},
             {"name": "온산 제련소 C", "type": "stack", "offset": [-0.008, -0.065], "conf": 0.96, "val": 1.1e-4, "gas": "SO2"},
             {"name": "남구 자동차 조립공장 D", "type": "factory_roof", "offset": [-0.035, 0.025], "conf": 0.84, "val": 4.0e-5, "gas": "CO"},
-            {"name": "석유공사 정유 기지 E", "type": "factory_roof", "offset": [0.015, -0.015], "conf": 0.89, "val": 5.5e-5, "gas": "VOCs"}
+            {"name": "울산 석유공사 정유 기지 E", "type": "factory_roof", "offset": [0.015, -0.015], "conf": 0.89, "val": 5.5e-5, "gas": "VOCs"}
         ]
     },
     "여수국가산단": {
