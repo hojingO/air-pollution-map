@@ -171,8 +171,6 @@ stations = db_manager.find("air_quality_stations")
 
 # 6. 메인 헤더 레이아웃
 st.markdown("<div class='main-title'>EcoMap AIR POLLUTION MONITOR</div>", unsafe_allow_html=True)
-st.markdown("<div class='sub-title'>AIHub 초분광 위성 데이터 기반 배출원 탐지 및 에어코리아 실시간 대기질 다차원 분석 플랫폼</div>", unsafe_allow_html=True)
-
 # 7. KPI 대시보드 카드 영역
 summary = spatial_analyzer.get_dashboard_summary()
 
