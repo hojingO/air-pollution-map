@@ -25,5 +25,6 @@ env/
 *.swp
 *.swo
 
-# Project specific data files (prevent pushing large AIHub datasets)
-data/
+# Project specific data files (only ignore large temporary files, keep small sample datasets)
+# data/
+# *.log
