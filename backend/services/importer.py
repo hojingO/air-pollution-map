@@ -123,11 +123,20 @@ class GeospatialImporter:
                 resolution = "30m" if "LS30" in str(file_path) else "10m"
                 satellite_name = "Landsat-8" if "LS30" in str(file_path) else "Sentinel-2"
 
+                # 산단 구역 필터링과 정상 연동되도록 파일명 기준 한국 산단명 매핑
+                region_name = ""
+                if "Sihwa" in file_path.name:
+                    region_name = "시화반월단지"
+                elif "Ulsan" in file_path.name:
+                    region_name = "울산석유화학단지"
+
+                address = f"대한민국 주요 산업지역 ({region_name} 산단 내 위성 분석 구역)" if region_name else f"대한민국 위성 분석 구역 ({satellite_name} {resolution} 마스크)"
+
                 return {
                     "name": file_path.stem.replace("_sample", ""),
                     "source_type": "satellite_area",
                     "location": geojson_polygon,
-                    "address": f"대한민국 위성 분석 구역 ({satellite_name} {resolution} 마스크)",
+                    "address": address,
                     "satellite_metadata": {
                         "satellite_name": satellite_name,
                         "band_type": "Land Classification Mask",
